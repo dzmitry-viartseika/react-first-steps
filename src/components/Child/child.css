@@ -1,0 +1,11 @@
+.child {
+    font-size: 40px;
+    color: yellow;
+}
+
+input.green {
+    border: 1px solid green;
+}
+input.red {
+    border: 1px solid red;
+}

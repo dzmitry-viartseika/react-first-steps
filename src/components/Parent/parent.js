@@ -1,7 +1,8 @@
 import React from 'react';
+import './parent.css'
 
 const Parent = () => (
-    <div>Parent: </div>
+    <div className="parent">Parent: </div>
 )
 
 export default Parent;
