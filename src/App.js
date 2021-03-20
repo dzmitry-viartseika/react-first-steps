@@ -24,9 +24,33 @@ class App extends Component {
     })
   }
 
+  onDeleteCar = (index) => {
+    const cars = this.state.cars;
+    const car = this.state.cars[index]
+    if (car.title === this.state.pageTitle) {
+      this.setState({
+        pageTitle: 'Deleted Title'
+      })
+    }
+    cars.splice(index, 1)
+    this.setState({
+      cars,
+    })
+  }
+
   toggleText = () => {
     this.setState({
       showCars: !this.state.showCars
+    })
+  }
+
+  onChangeHeadline = (title, index) => {
+    const car = this.state.cars[index];
+    car.title = title;
+    const cars = [...this.state.cars]
+    cars[index] = car;
+    this.setState({
+      cars,
     })
   }
 
@@ -49,8 +73,11 @@ class App extends Component {
             content
           </p> : null
         }
-        {cars.map(car => <Child key={car.title} title={car.title} year={car.year}
-                              onChangeTitle={() => this.changeTitleHandler(car.title)} />)}
+        {cars.map((car, index) =>
+            <Child key={car.title} title={car.title} year={car.year}
+                              onChangeHeadline={event => this.onChangeHeadline(event.target.value, index)}
+                              onChangeTitle={() => this.changeTitleHandler(car.title)}
+                              onDeleteCar={() => this.onDeleteCar(index)} />)}
       </div>
 
     );
