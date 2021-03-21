@@ -64,13 +64,13 @@ class App extends Component {
 
     return (
       <div style={divStyle}>
-        <h1>{ title }</h1>
+        <h1>{ this.props.mainTitle }</h1>
         <input type="text" onChange={this.handlerInput}/>
         <button onClick={this.changeTitleHandler.bind(this, 'parent changed')}>change title</button>
         <button onClick={this.toggleText}>Toggle</button>
         { this.state.showCars ?
           <p>
-            content
+            { title }
           </p> : null
         }
         {cars.map((car, index) =>
