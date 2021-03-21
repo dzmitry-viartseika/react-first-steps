@@ -12,7 +12,6 @@ export default props => {
 
     inputClasses.push(props.title !== '' ? 'green' : 'red');
 
-
     return (
         <div className={classes.child}>
             <div style={style}>
