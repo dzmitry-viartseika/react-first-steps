@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import './App.scss';
 import Child from './components/Child/child';
 import Counter from './components/Сounter/counter'
+import Nav from "./components/Nav/nav";
 import Test from './components/Test/test'
 import ButtonTemplate from "./components/Elements/ButtonTemplate";
 import PropTypes from 'prop-types';
@@ -96,9 +97,16 @@ class App extends Component {
   //   console.log('getDerivedStateFromProps')
   // }
 
+  proceedToHome = () => {
+    console.log('proceedToHome');
+    this.props.history.push({
+      pathname: '/'
+    })
+  }
+
 
   render() {
-    console.log('render')
+    console.log('props', this.props)
     const divStyle = {
       textAlign: 'center'
     }
@@ -119,6 +127,10 @@ class App extends Component {
 
     return (
       <>
+        <Nav />
+        <button onClick={this.proceedToHome}>
+          Back to Main
+        </button>
         <ButtonTemplate buttonText="Click me"/>
         <button onClick={() => this.setState({
           fullName: 'Dmitry Verteyko'}
