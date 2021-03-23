@@ -3,6 +3,7 @@ import './App.scss';
 import Child from './components/Child/child';
 import Counter from './components/Сounter/counter'
 import Test from './components/Test/test'
+import ButtonTemplate from "./components/Elements/ButtonTemplate";
 import PropTypes from 'prop-types';
 
 // export const ClickedContext = React.createContext(false);
@@ -118,6 +119,7 @@ class App extends Component {
 
     return (
       <>
+        <ButtonTemplate buttonText="Click me"/>
         <button onClick={() => this.setState({
           fullName: 'Dmitry Verteyko'}
           )}>Change Clicked Context Api</button>
