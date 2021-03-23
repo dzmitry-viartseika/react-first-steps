@@ -1,0 +1,13 @@
+.counter2 {
+
+  button.disable {
+    pointer-events: none;
+    cursor: default;
+    background: gray;
+  }
+
+  h2 {
+    font-size: 100px;
+    color: blue;
+  }
+}

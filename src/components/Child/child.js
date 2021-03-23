@@ -18,14 +18,14 @@ export default props => {
                 Child: { props.title }
             </div>
             <h1>{ props.children }</h1>
+            <button onClick={props.onChangeTitle}>Click</button>
+            <button onClick={props.onDeleteCar}>Delete Car</button>
             <input
                 type="text"
                 onChange={props.onChangeHeadline}
                 value={props.title}
                 className={classes['child__input']}
             />
-            <button onClick={props.onChangeTitle}>Click</button>
-            <button onClick={props.onDeleteCar}>Delete Car</button>
         </div>
     )
 };
