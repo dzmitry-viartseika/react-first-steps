@@ -1,6 +1,7 @@
 import About from '../pages/About';
 import Home from '../pages/Home';
 import Help from '../pages/Help';
+import Car from '../pages/Car';
 
 const routes = {
     home: {
@@ -15,6 +16,10 @@ const routes = {
         url: '/help',
         component: Help
     },
+    car: {
+        url: '/car/',
+        component: Car
+    }
 }
 
 export default routes;

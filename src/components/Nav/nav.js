@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, NavLink, BrowserRouter } from 'react-router-dom'
+import { Route, NavLink, BrowserRouter, Switch } from 'react-router-dom'
 import routes from '../../routes/routes';
 import './nav.scss'
 import navList from "../../constants/navList";
@@ -24,14 +24,12 @@ export default class Nav  extends Component {
                     </ul>
                 </nav>
                 <hr/>
-                <BrowserRouter>
-                    {Object.values(routes).map(route =>
-                        <Route exact
-                        key={route.component}
-                        path={route.url}
-                        component={route.component}
-                        />)}
-                </BrowserRouter>
+                        {Object.values(routes).map(route =>
+                            <Route exact
+                                   key={route.component}
+                                   path={route.url}
+                                   component={route.component}
+                            />)}
             </div>
         )
     }

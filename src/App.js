@@ -97,13 +97,6 @@ class App extends Component {
   //   console.log('getDerivedStateFromProps')
   // }
 
-  proceedToHome = () => {
-    console.log('proceedToHome');
-    this.props.history.push({
-      pathname: '/'
-    })
-  }
-
 
   render() {
     console.log('props', this.props)
@@ -128,9 +121,6 @@ class App extends Component {
     return (
       <>
         <Nav />
-        <button onClick={this.proceedToHome}>
-          Back to Main
-        </button>
         <ButtonTemplate buttonText="Click me"/>
         <button onClick={() => this.setState({
           fullName: 'Dmitry Verteyko'}
